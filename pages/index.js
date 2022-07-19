@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,10 +12,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Hello <a href="https://nextjs.org">Next!</a>
-        </h1>
+      <main>
+        <h1>The Home Page</h1>
+        <ul>
+          <li>
+            <Link href="/portfolio">Portfolio</Link>
+          </li>
+          <li>
+            <Link href="/clients">Clients</Link>
+          </li>
+        </ul>
       </main>
     </div>
   )
