@@ -1,3 +1,1 @@
-# NextJS
-
-Nextjs 연습용 저장소입니다.
+# NextJS ESLint + Prettier + TS 보일러 플레이트
