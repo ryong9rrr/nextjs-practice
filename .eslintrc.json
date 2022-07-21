@@ -1,5 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "react"],
   "env": {
     "browser": true,
     "node": true,
@@ -9,12 +10,17 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "prettier"
   ],
   "parserOptions": {
     "project": "./tsconfig.json",
     "sourceType": "module",
     "ecmaFeatures": { "jsx": true }
   },
-  "plugins": ["react", "@typescript-eslint/parser"]
+  "rules": {
+    "eqeqeq": "error",
+    "no-var": "error"
+  }
 }
