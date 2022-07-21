@@ -3,8 +3,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '~/styles/Home.module.css';
 import Text from '~/components/Text';
+import { getPosts } from '~/service/sampleApi';
 
 const Home: NextPage = () => {
+  const handleClick = async () => {
+    const { data } = await getPosts();
+    console.log(data);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,6 +24,7 @@ const Home: NextPage = () => {
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </span>
         <Text size="50px">This text is sample</Text>
+        <button onClick={handleClick}>click</button>
       </main>
     </div>
   );
