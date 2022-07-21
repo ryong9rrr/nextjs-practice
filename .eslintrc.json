@@ -16,5 +16,5 @@
     "sourceType": "module",
     "ecmaFeatures": { "jsx": true }
   },
-  "plugins": ["react", "@typescript-eslint"]
+  "plugins": ["react", "@typescript-eslint/parser"]
 }
