@@ -13,3 +13,15 @@ export const formatDate = (source: Date, delimiter = '-') => {
 
   return [year, month, day].join(delimiter);
 };
+
+export const humanReadableDate = (date: string) => {
+  return new Date(date).toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+};
+
+export const formatAddress = (location: string) => {
+  return location.replace(', ', '\n');
+};
